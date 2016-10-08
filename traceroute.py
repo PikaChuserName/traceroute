@@ -8,7 +8,7 @@ def main():
     ttl = 0
     while 1:
         ping = IP(dst=dst, ttl=ttl)/ICMP(type=8)
-        result = sr1(ping, timeout=TIMEOUT)
+        result = sr1(ping, timeout=TIMEOUT, verbose=0)
         if result == None:
             print 'Timeout'
         elif result.type == 11:
